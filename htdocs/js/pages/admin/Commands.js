@@ -138,7 +138,7 @@ Class.add( Page.Admin, {
 		html += '<center><table style="margin:0;">';
 		
 		this.command = {
-			"id": "",
+			"id": app.generateRandomString(prefix="c"),
 			"title": "",
 			"exec": "/bin/sh",
 			"script": "",

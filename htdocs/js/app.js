@@ -20,6 +20,7 @@ app.extend({
 		api: false
 	},
 	
+	
 	receiveConfig: function(resp) {
 		// receive config from server
 		delete resp.code;
@@ -127,6 +128,19 @@ app.extend({
 				if (!Nav.inited) Nav.init();
 			}
 		});
+	},
+	
+	generateRandomString: function(prefix = '', length = 10) {
+	  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789'; // Allowed characters
+	  let result = prefix;
+
+	  // Generate 10 more random characters
+	  for (let i = 1; i < length; i++) {
+	      const randomIndex = Math.floor(Math.random() * characters.length);
+	      result += characters[randomIndex];
+	  }
+		console.log('info', 'generate_random_string: ' + result)
+	  return result;
 	},
 	
 	initControlMenus: function() {
@@ -470,7 +484,7 @@ app.extend({
 	
 	get_password_toggle_html: function() {
 		// get html for a password toggle control
-		return '<span class="link password_toggle" onMouseUp="app.toggle_password_field(this)">Hide</span>';
+		return '<span class="link password_toggle" onMouseUp="app.toggle_password_field(this)">Show</span>';
 	},
 	
 	toggle_password_field: function(span) {
@@ -752,6 +766,7 @@ function copyToClipboard(text) {
 	selection.removeAllRanges();
 	window.document.body.removeChild(span);
 };
+
 
 // ----------------------------------------------
 // https://github.com/teamdf/jquery-visible

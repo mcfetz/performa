@@ -171,7 +171,7 @@ Class.add( Page.Admin, {
 		html += '<center><table style="margin:0;">';
 		
 		this.monitor = {
-			"id": "",
+			"id": app.generateRandomString(prefix="m"),
 			"title": "",
 			"source": "",
 			"data_type": "float",

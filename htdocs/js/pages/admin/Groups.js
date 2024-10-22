@@ -148,7 +148,7 @@ Class.add( Page.Admin, {
 		html += '<center><table style="margin:0;">';
 		
 		this.group = {
-			id: "",
+			"id": app.generateRandomString(prefix="g"),
 			title: "",
 			hostname_match: "",
 			alerts_enabled: true

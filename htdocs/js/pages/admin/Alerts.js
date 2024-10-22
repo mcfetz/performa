@@ -136,7 +136,7 @@ Class.add( Page.Admin, {
 		html += '<center><table style="margin:0;">';
 		
 		this.alert = {
-			"id": "",
+			"id": app.generateRandomString(prefix="a"),
 			"title": "",
 			"expression": "",
 			"message": "",
