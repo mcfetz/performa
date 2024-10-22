@@ -46,7 +46,7 @@ Class.subclass( Page.Base, "Page.Login", {
 					html += '<tr><td colspan="2"><div class="table_spacer"></div></td></tr>';
 					html += '<tr>';
 						html += '<td align="right" class="table_label">Password:</td>';
-						html += '<td align="left" class="table_value"><div><input type="text" name="password" id="fe_login_password" size="30" spellcheck="false" value=""/>' + app.get_password_toggle_html() + '</div></td>';
+						html += '<td align="left" class="table_value"><div><input type="password" name="password" id="fe_login_password" size="30" spellcheck="false" value=""/>' + app.get_password_toggle_html() + '</div></td>';
 					html += '</tr>';
 					html += '<tr><td colspan="2"><div class="table_spacer"></div></td></tr>';
 				html += '</table></center>';
